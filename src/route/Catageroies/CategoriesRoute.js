@@ -34,7 +34,7 @@ router.delete('/DeleteCategories/:categoriesid', (req, res) => {
     })
 })
 
-// Edit Movies
+// Edit Categories
 router.patch('/EditCategories/:categoriesid', (req, res) => {
     const sql = `Edit Categories SET completed = true
                 WHERE id = ?`

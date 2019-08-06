@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const conn = require('../../connection')
 
-// CREATE Movies
+// CREATE Add Connection
 router.post('/AddConnection', (req, res) => {
     const sql = `INSERT INTO Connection SET ?`
     const sql2 = `SELECT * FROM Movcat WHERE id = ?`
@@ -22,7 +22,7 @@ router.post('/AddConnection', (req, res) => {
 })
 
 
-// DELETE Categories
+// DELETE Connection
 router.delete('/DeleteConnection/:movecatid', (req, res) => {
     const sql = `DELETE FROM Movcat WHERE id = ?`
     const data = req.params.movecatid
